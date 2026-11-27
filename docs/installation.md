@@ -85,8 +85,7 @@ Follow the instructions on the [official UV documentation](https://docs.astral.s
 **Note:** If you install uv and your Python version is lower than 3.13, you can use it to install the required Python version using the command:
 
 ```bash
-uv install python==3.13
-uv sync
+uv install python 3.13
 ```
 
 ### Installing Orbitron on Linux
