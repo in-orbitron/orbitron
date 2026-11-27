@@ -1,0 +1,30 @@
+[project]
+name = "orbitron"
+version = "0.1.0"
+description = "A modern Discord bot written in Python, built with discord.py, designed to be modular and easily extendable with custom extensions."
+readme = "README.md"
+authors = [
+    { name = "TheShadow131", email = "github.spiffy079@passinbox.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "discord-py>=2.7.1",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pre-commit>=4.7.0",
+    "ruff>=0.17.6",
+]
+
+[project.scripts]
+orbitron = "orbitron.__main__:main"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "ANN", "D"]
+ignore = ["D203", "D212", "D415"]
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
